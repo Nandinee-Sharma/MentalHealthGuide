@@ -72,6 +72,7 @@ button {
     margin-top: 10px;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    margin-top: 20px;
 }
 
 button:hover {
@@ -97,7 +98,6 @@ select {
     box-shadow: 2px 2px 9px rgb(227, 95, 117);
     font-weight: 700;
     font-size:larger;
-
 }
 
 /* Right Half */
@@ -109,9 +109,12 @@ select {
     height: 300px; /* Increased height of the breathing section */
     font-size: x-large;
 }
+
 .breathing-container{
-    height: 380px;
+    height: auto;
+    padding-bottom: 30px;
 }
+
 .todo-container{
     margin-bottom: 38px;
     padding-right: 40px;
@@ -146,6 +149,7 @@ h2{
 .quote-container{
     margin-top: 30px;
     font-size: x-large;
+    padding-bottom: 30px;
 }
 
 /* To-Do List Styling */
@@ -277,10 +281,10 @@ option{
 
 .mood-section{
     box-shadow: 2px 2px 5px rgb(227, 95, 117);
-    height: 150px;
+    height: auto;
     padding-left: 1rem;
     padding-right: 1 rem;
-    padding:20px 20px;
+    padding-bottom: 1 rem;
     border-radius: 10px;
 }
 
