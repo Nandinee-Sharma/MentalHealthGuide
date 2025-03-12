@@ -62,6 +62,7 @@ nav {
 }
 
 button {
+    position: relative;
     background-color: #3fa542;
     color: white;
     border: none;
