@@ -229,6 +229,7 @@ li button:last-child {
 
 #breathingMessage{
     font-weight: bold;
+    margin-bottom: 30px;;
 }
 
 #breathingCounter{
@@ -281,7 +282,7 @@ option{
 
 .mood-section{
     box-shadow: 2px 2px 5px rgb(227, 95, 117);
-    height: auto;
+    height: 30%;
     padding-left: 1rem;
     padding-right: 1 rem;
     padding-bottom: 1 rem;
