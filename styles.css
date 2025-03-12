@@ -1,0 +1,291 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto; /* Added scrollbar for the whole page */
+    transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+nav {
+    width: 100%;
+    background-color: #4CAF50;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+
+.navbar button {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+    background-color: #333;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Left Half */
+.left-half, .right-half {
+    width: 48%;
+}
+
+.mood-section {
+    margin-bottom: 40px;
+    padding: 30px 30px;
+    gap: 2rem;
+}
+
+button {
+    background-color: #3fa542;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #165e1d;
+}
+
+/* Select Box */
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+
+/* Guidance Section */
+.guidance-container {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 9px rgb(227, 95, 117);
+    font-weight: 700;
+    font-size:larger;
+
+}
+
+/* Right Half */
+.todo-container, .breathing-container, .quote-container {
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 9px rgb(227, 95, 117);
+    padding: 20px;
+    border-radius: 10px;
+    height: 300px; /* Increased height of the breathing section */
+    font-size: x-large;
+}
+.breathing-container{
+    height: 380px;
+}
+.todo-container{
+    margin-bottom: 38px;
+    padding-right: 40px;
+    box-shadow: 2px 2px 9px rgb(227, 95, 117);
+    padding: 20px;
+    border-radius: 10px;
+    min-height: 300px; /* Ensure a minimum height */
+    max-height: none; /* Allow it to expand infinitely */
+    overflow-y: auto; /* Optional: Add scrolling if needed */
+}
+h2{
+    text-shadow: 1px 1px 3px black;
+}
+
+#mq{
+    font-weight: bold;
+    background-color: #f44336;
+    box-shadow: 2px 3px 4px rgb(200, 11, 11);
+    border: 1px solid brown
+}
+
+#mq:hover{
+    background-color: rgb(103, 19, 19);
+}
+#quote{
+    font-weight:bold;
+    font-style: italic;
+    color:rgb(72, 87, 166);
+    text-shadow: 1px 1px 1px rgb(86, 84, 84);
+    font-size: larger;
+}
+.quote-container{
+    margin-top: 30px;
+    font-size: x-large;
+}
+
+/* To-Do List Styling */
+#todoInput {
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+    max-height: none; /*Remove max-height */
+    overflow-y: visible; /* Ensure full expansion */
+    
+}
+
+li {
+    background-color: #f9f9f9;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    width: 98%;
+    padding: 5px;
+    height: 50px; /* Ensure enough height for buttons */
+    position: relative; /* To position buttons absolutely */
+    margin-bottom: 10px; /* Space between list items */
+    border-radius: 5px;
+}
+
+/* Ensure buttons are aligned right */
+li button {
+    right: 0; /* Align buttons to the right */
+    margin: 0; /* Remove margin */
+    padding: 5px 5px;
+    gap: 1rem;
+    text-align: right;
+}
+
+/* Make sure buttons have no space between them */
+li button:first-child {
+     /* Adjust if you want any space between buttons */
+    background-color: #ffeb3b;
+    color: #000;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px gold;
+    margin-right: 80px;
+    position: absolute;
+}
+
+/* Delete Button */
+li button:last-child {
+    position: absolute;
+    background-color: #f44336;
+    box-shadow: 1px 2px 4px rgb(255, 72, 0);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+
+/* Breathing Circle */
+#breathingAnimation {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: none;
+    transition: all 2s ease-in-out;
+}
+
+#breathingMessage{
+    font-weight: bold;
+}
+
+#breathingCounter{
+    color: green;
+    text-shadow: #165e1d;
+}
+@keyframes breathe {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-half, .right-half {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+#mood {
+    background-color: #fef100;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+label {
+    font-size: xx-large;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgb(126, 126, 120);
+}
+
+option{
+    background-color: white;
+    color: black;
+}
+
+.mood-section{
+    box-shadow: 2px 2px 5px rgb(227, 95, 117);
+    height: 150px;
+    padding-left: 1rem;
+    padding-right: 1 rem;
+    padding:20px 20px;
+    border-radius: 10px;
+}
+
+#moreGuidanceBtn{
+    margin-left: 20px;
+    margin-top: 15px;
+    font-weight:600;
+}

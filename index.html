@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood-Based Mental Health Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar with Dark Mode Toggle -->
+    <nav>
+        <div class="navbar">
+            <h1>🧘 Mental Health Guide</h1>
+            <button id="darkModeToggle">🌙 Dark Mode</button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Left Half: Mood Selector, Motivational Quote, and Guidance -->
+        <div class="left-half">
+            <div class="mood-section">
+                <label for="mood">How are you feeling today?</label>
+                <select id="mood">
+                    <option value="happy">Happy 😊</option>
+                    <option value="stressed">Stressed 😫</option>
+                    <option value="sad">Sad 😢</option>
+                    <option value="angry">Angry 😡</option>
+                    <option value="anxious">Anxious 😰</option>
+                    <option value="motivated">Motivated 🚀</option>
+                </select>
+                <button onclick="showGuidance()">Get Guidance</button>
+            </div>
+
+            <!-- Guidance Section -->
+            <div class="guidance-container" id="guidance-container"></div>
+
+            <!-- More Guidance Button -->
+            <button id="moreGuidanceBtn" style="display:none;" onclick="window.open('https://www.verywellmind.com', '_blank')">More Guidance</button>
+
+
+            <!-- Motivational Quote Section -->
+            <div class="quote-container">
+                <h2>💬 Motivational Quote</h2>
+                <button id="mq" onclick="showRandomQuote()">Get Quote that inspires you</button>
+                <p id="quote"></p>
+            </div>
+
+        </div>
+
+        <!-- Right Half: To-Do List and Breathing Exercise -->
+        <div class="right-half">
+            <!-- Self-Care To-Do List -->
+            <div class="todo-container">
+                <h2>📌 Self-Care To-Do List</h2>
+                <input type="text" id="todoInput" placeholder="Add an activity...">
+                <button onclick="addTodo()">Add</button>
+                <ul id="todoList"></ul>
+            </div>
+
+            <!-- Breathing Exercise -->
+            <div class="breathing-container">
+                <h2>🫁 Breathing Exercise</h2>
+                <button id="startBreathingBtn" onclick="startBreathing()">Start</button>
+                <button id="stopBreathingBtn" onclick="stopBreathing()" style="display:none;">Stop</button>
+                <div id="breathingAnimation"></div>
+                <p id="breathingMessage"></p>
+                <p id="breathingCounter">Time: 0s</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
