@@ -183,7 +183,7 @@ ul {
 }
 
 li {
-    background-color: #f9f9f9;
+    background-color: #f6d8e8;
     color: black;
     font-weight: 600;
     display: flex;
@@ -193,6 +193,7 @@ li {
     height: 50px; /* Ensure enough height for buttons */
     position: relative; /* To position buttons absolutely */
     margin-bottom: 10px; /* Space between list items */
+    margin-top: 15px;
     border-radius: 5px;
 }
 
