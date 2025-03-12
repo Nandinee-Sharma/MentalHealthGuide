@@ -128,8 +128,8 @@ function showGuidance() {
         default:
             guidanceText = 'Select your mood to receive personalized guidance!';
     }
+    guidanceContainer.style.display = "inline-block";
 
     guidanceContainer.textContent = guidanceText;
     document.getElementById('moreGuidanceBtn').style.display = "inline-block"; // Show more guidance button
-
 }
