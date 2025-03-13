@@ -308,6 +308,7 @@ option{
 }
 
 #moreGuidanceBtn {
+    margin-top: 5%;
     max-width: 100%; /* Prevent the button from exceeding container width */
     white-space: nowrap; /* Prevent text wrapping */
     overflow: hidden;
